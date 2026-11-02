@@ -1,0 +1,28 @@
+/* Lyfe's ballpoint look: blue ink on paper, a dark sheet at night. */
+:root { --paper:#F3F1EA; --card:#FAF8F2; --ink:#1F3398; --soft:#3E4C9E; --faint:#626AA3; --rule:rgba(31,51,152,.09); color-scheme: light dark }
+@media (prefers-color-scheme: dark) {
+  :root { --paper:#111214; --card:#1B1C1F; --ink:#F2F2F2; --soft:#C9CBD1; --faint:#8E929B; --rule:rgba(255,255,255,.06) }
+}
+* { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100% }
+body { margin: 0; background: var(--paper); color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  padding: 40px max(16px, env(safe-area-inset-right)) 64px max(16px, env(safe-area-inset-left));
+  background-image: repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px); }
+main { max-width: 640px; margin: 0 auto }
+nav { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 15px }
+.mark { font-weight: 800; letter-spacing: .3px; color: var(--faint); text-decoration: none }
+nav .lang { color: var(--faint) }
+a { color: var(--ink) }
+h1 { font-size: 40px; font-weight: 800; letter-spacing: -1px; margin: 6px 0 4px; text-wrap: balance }
+.date { color: var(--faint); font-size: 14px; margin-bottom: 26px }
+h2 { font-size: 21px; font-weight: 800; margin: 34px 0 8px; text-wrap: balance }
+p, li { font-size: 16.5px; line-height: 1.6; color: var(--soft) }
+b { color: var(--ink) }
+ul { padding-left: 20px } li { margin-bottom: 8px }
+.lead { background: var(--card); border-radius: 18px; padding: 16px 20px; box-shadow: 0 1px 0 var(--rule) }
+.lead ul { margin: 0 }
+.q { margin-top: 18px } .q b { display: block; margin-bottom: 2px } .q p { margin-top: 0 }
+.links { display: grid; gap: 12px; margin-top: 24px }
+.links a { display: block; background: var(--card); border-radius: 18px; padding: 16px 20px; font-size: 18px; font-weight: 700; text-decoration: none }
+footer { margin-top: 44px; color: var(--faint); font-size: 14px }
